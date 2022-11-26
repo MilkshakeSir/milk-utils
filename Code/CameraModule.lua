@@ -17,10 +17,10 @@ function cameraModule:LookAtPart(part: Part)
 	camera.CFrame = part.CFrame
 end
 
-function cameraModule:TweenPart(part: Part)
+function cameraModule:TweenPart(part: Part, tweenInfo: TweenInfo)
 	camera.CameraType = Enum.CameraType.Scriptable
 
-	local tween = TweenService:Create(camera, TweenData, { CFrame = part.CFrame })
+	local tween = TweenService:Create(camera, tweenInfo, { CFrame = part.CFrame })
 	tween:Play()
 end
 

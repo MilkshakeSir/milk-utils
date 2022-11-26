@@ -2,11 +2,14 @@
 
 Here I made a some cool modules that I use when I am making my game
 
-These modules are listed by how useful they are
+These modules are listed randomly
 
 ## CameraModule
 
-[Link](https://github.com/MilkdevNew/GameUtils)
+- [Link](https://github.com/MilkdevNew/GameUtils/blob/master/Code/CameraModule.lua)
+- [Raw](https://raw.githubusercontent.com/MilkdevNew/GameUtils/master/Code/CameraModule.lua)
+
+I made this module because most of the time I forget on how to move the camera so I made this module
 
 > ⚠️ Run the module on the client
 
@@ -16,15 +19,18 @@ LookAtPart
 
 ```lua
 local CameraModule = require(path.to.module)
-CameraModule:LookAtPart(part:Part) -- Change the camera CFrame to the part
+CameraModule:LookAtPart(part:Part) -- Change the camera CFrame too the part
 ```
 
 TweenPart
 
 ```lua
 local CameraModule = require(path.to.module)
-CameraModule:TweenPart(part) -- Tweens the camera
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.In)
+CameraModule:TweenPart(part,tweenInfo) -- Tweens the camera
 ```
+
+> ⚠️ You need to pass in the a tweenInfo object into the function
 
 Clear
 
@@ -35,6 +41,40 @@ CameraModule:Clear() -- Reset the camera
 
 ## DeviceChecker
 
-I was writing this on 11/11/22 can't update because I have to work on Outside so it's stops here
+- [Link](https://github.com/MilkdevNew/GameUtils/blob/master/Code/DeviceChecker.lua)
+- [Raw](https://raw.githubusercontent.com/MilkdevNew/GameUtils/master/Code/DeviceChecker.lua)
 
-update
+Return the boolean value for the device function
+
+Examples
+
+Using a computer
+
+`isComputer() ---> true`
+`isTouchDevice() ---> false`
+
+Using a phone
+
+`isComputer() ---> false`
+`isTouchDevice() ---> true`
+
+Here are the available function
+
+- _isComputer_
+- _isTouchDevice_
+- _isXbox_
+- _isVr_
+
+## ImportAsset
+
+- [Link](https://github.com/MilkdevNew/GameUtils/blob/master/Code/ImportAsset.lua)
+- [Raw](https://raw.githubusercontent.com/MilkdevNew/GameUtils/master/Code/ImportAsset.lua)
+
+This function is use to import avatar item into the game
+
+All imports are put into a cache for faster execution
+
+```lua
+local ImportAsset = require(path.to.module)
+local item = ImportAsset(id) -- Return a Instance and saves the instance in the cache
+```
