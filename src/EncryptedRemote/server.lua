@@ -61,7 +61,7 @@ return function(Remote: RemoteEvent)
 
 	function Wrapper:FireAllClients(...)
 		for _, Player in ipairs(Players:GetPlayers()) do
-			Wrapper:SendToPlayer(Player, ...)
+			Wrapper:FireAllClients(Player, ...)
 		end
 	end
 
