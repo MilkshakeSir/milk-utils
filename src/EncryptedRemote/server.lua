@@ -59,5 +59,11 @@ return function(Remote: RemoteEvent)
 		Remote:FireClient(Player, encryptedData, signature)
 	end
 
+	function Wrapper:FireAllClients(...)
+		for _, Player in ipairs(Players:GetPlayers()) do
+			Wrapper:SendToPlayer(Player, ...)
+		end
+	end
+
 	return Wrapper
 end
