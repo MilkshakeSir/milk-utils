@@ -1,6 +1,6 @@
 [package]
 name = "milkdevnew/milk-utils"
-version = "1.1.1"
+version = "1.1.2"
 description = "Modules we use in our games"
 registry = "https://github.com/UpliftGames/wally-index"
 license = "MIT"
