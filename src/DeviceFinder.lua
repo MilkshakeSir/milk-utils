@@ -4,8 +4,7 @@ local UserInputService = game:GetService("UserInputService")
 function DeviceFinder.getDevice()
 	local deviceInfo
 	local lastInput = UserInputService:GetLastInputType()
-	
-	
+
 	-- Computer check
 	if UserInputService.KeyboardEnabled and UserInputService.MouseEnabled then
 		if UserInputService.TouchEnabled then
@@ -16,9 +15,7 @@ function DeviceFinder.getDevice()
 	else
 		deviceInfo = "PHONE"
 	end
-	
-	
-	
+
 	if deviceInfo then
 		return deviceInfo
 	else

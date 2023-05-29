@@ -4,20 +4,11 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Cache = Instance.new("Folder", ReplicatedStorage)
 Cache.Name = "Cache"
 
-function loop(item)
-	for i, v in pairs(item) do
-		print(i, v)
-	end
-end
-
 local function ImportAsset(itemId: number)
 	local List = Cache:GetChildren()
-
-	loop(List)
-
 	if Cache:FindFirstChild(itemId) then
-		warn("Item found in cache")
-		return Cache:FindFirstChild(itemId)
+		local CloneObject = Cache:FindFirstChild(itemId):Clone()
+		return CloneObject
 	else
 		local object
 

@@ -1,8 +1,6 @@
-# Game Utils
+# milk-utils
 
-Here I made a some cool modules that I use when I am making my game
-
-These modules are listed randomly
+Here are some modules I made when making my games.
 
 ## CameraModule
 
